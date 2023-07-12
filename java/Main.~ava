@@ -1,0 +1,36 @@
+/******************************************************************************
+
+
+
+*******************************************************************************/
+import java.util.*;
+public class Main
+{
+  public static void main(String[] args) {
+  int zahlen[][] = new int[2][4];
+  int temp[] = new int[2];
+  Scanner sc = new Scanner(System.in);
+  int hori[] = new int [4];
+  for (int i = 0; i< zahlen.length;i++){
+      for (int j = 0; j < zahlen[i].length;j++){
+  
+  System.out.print((i+1) + ". Monat\t"+(j+1)+". Tag");
+  zahlen[i][j] = sc.nextInt();
+        temp[i] += zahlen[i][j];
+      }    
+  }
+  for (int i = 0; i< zahlen[0].length;i++){
+      for (int j = 0; j < zahlen.length;j++){
+        System.out.print(zahlen[j][i] + "\t");    
+        hori[i] += zahlen[j][i];
+        System.out.print("\t" + hori[i]);
+      }
+      System.out.println();
+      
+    }
+    for (int i = 0;i < temp.length ;i++ ) {
+      System.out.print(temp[i] + "\t");
+    } // end of for
+  }
+}
+
